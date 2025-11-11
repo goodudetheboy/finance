@@ -1,4 +1,4 @@
-**Interest rates**
+# Interest rates
 
 - Required rate of return: corporate finance  
 - Discount rate: fixed income and equity evaluation  
@@ -54,7 +54,7 @@ Interest rates can change by a lot of things
 - More difficulty passing the bags  
 - Can change a lot of reasons not only because of central banks
 
-**Future Value**
+# Future Value
 
 - P\_v: present value  
 - F\_v: future value  
@@ -80,3 +80,70 @@ Let’s do some exercise:
   - Interest rate \= 7  
   - N \= 5  
   - Compute FV
+
+- What if we have semi annual, then we can do:
+    $$FV = 5M(1 + (0.07/2))^{10} = 5M(+$$
+
+## Another example of Future Value
+```
+2.5M yen @ 8% for 6-years
+```
+$$FV = PV(1+r)^N = 2.5M(1.08)^6 = 3,967,186$$
+
+This is pretty easy, let's do something more fun
+```
+$10M @ t_5, invested @9%. Find FV @ t_15 as of t_0.
+```
+We can just simply calculate for as long as the money is invested:
+$$ FV = 10M(1.09)^{10} \approx 23.7M$$
+
+Let's see if we are right. First find PV at $t_0$:
+$$PV = \frac{FV}{(1+r)^N} = \frac{10M}{(1.09)^5} \approx 7M$$
+
+then check:
+$$FV = 7M (1.09)^{15} \approx 23.7M$$
+
+basically the same, so we can just calculate as is at the start of $t_5$
+
+# Compounding frequency
+
+Stated annual interest rate $r_s$ (quoted interest rate)
+$$ FV = PV(1+\frac{r_s}{m})^{mN}$$
+
+Example:
+```
+2-yr CD @ 8% quarterly
+```
+We have:
+$$10,000(1+.08/4)^{4\cdot 2} = 11,716.59$$
+
+These will be very important when we comes to the quantitative section.
+
+## Continuous compounding
+Very common with derivatives, especially for futures and forwards. You have to use this because that's what the market uses.
+
+```
+$100 @ 5%
+```
+
+| Compounding Frequency| FV | Effective Annual Rate (EAR)|
+|---|---|---|
+| annually | $105 | 5% |
+| semi-annual | $105.06 | 5.06% |
+| quarterly | $105.09 | 5.09% |
+| monthly | $105.12 | 5.12% |
+| daily | $105.13 | 5.13% |
+| **continuous** | $100e^{r_sN}$ = 105.13|  5.13%
+
+Tips: continuous compounding yield very close to daily compounding
+
+### EAR
+How to calculate?
+$$EAR = (1+\frac{r_s}{m})^m - 1$$
+
+For continuous compounding, a little different:
+$$ EAR = e^{r_s} - 1$$
+
+if we know EAR, we can solve for $r_s$.
+
+Continue at 41:31
