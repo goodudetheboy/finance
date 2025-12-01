@@ -247,3 +247,5 @@ $$PV_4 = \frac{100}{.05} = 2000$$
 
 Then we find PV from this:
 $$PV = \frac{PV_4}{(1.05)^4} = \frac{2000}{1.05^4} = 1,645.40$$
+
+Continue at 1:30:26
