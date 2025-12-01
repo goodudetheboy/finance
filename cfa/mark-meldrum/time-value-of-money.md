@@ -139,11 +139,34 @@ Tips: continuous compounding yield very close to daily compounding
 
 ### EAR
 How to calculate?
-$$EAR = (1+\frac{r_s}{m})^m - 1$$
+> $$EAR = (1+\frac{r_s}{m})^m - 1$$
 
 For continuous compounding, a little different:
-$$ EAR = e^{r_s} - 1$$
+> $$ EAR = e^{r_s} - 1$$
 
 if we know EAR, we can solve for $r_s$.
 
 Continue at 41:31
+
+## Annuity
+Definition: Finite set of level (i.e. equal) sequential cash flows
+- Ordinary - first cash flow at $t_i$
+- due - first class flow at $t_0$
+
+Perpetuity - infinite ordinary activity
+e.g. Ordinary annuity
+
+![alt text](image/1.png)
+
+Sum those up together, we have $5525.63$. This is too long, we have a better equation, called FV annuity factor
+
+> $$FV = A\left[\frac{(1+r)^N - 1}{R}\right]$$
+
+Plugging the above value in, we have
+$$100 \left[\frac{(1.05)^5-1}{0.05}\right] = \$5525.63$$
+
+which is exactly equal to what we have above.
+
+Future value of an Ordinary Annuity -> Annuity Due:
+
+> $$FV = A\left[\frac{(1+r)^N - 1}{R}\right] \times (1+r)$$
