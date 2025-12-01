@@ -105,7 +105,7 @@ $$FV = 7M (1.09)^{15} \approx 23.7M$$
 
 basically the same, so we can just calculate as is at the start of $t_5$
 
-# Compounding frequency
+## Compounding frequency
 
 Stated annual interest rate $r_s$ (quoted interest rate)
 $$ FV = PV(1+\frac{r_s}{m})^{mN}$$
@@ -170,3 +170,80 @@ which is exactly equal to what we have above.
 Future value of an Ordinary Annuity -> Annuity Due:
 
 > $$FV = A\left[\frac{(1+r)^N - 1}{R}\right] \times (1+r)$$
+
+## Unequal Cash Flows
+![alt text](image/2-unequal-cash-flow.png)
+
+What happen when payment due at each $t$ is different. We can do it the caveman way of
+
+$$1000\cdot (1.05)^4 + 2000\cdot(1.05)^3 + \cdots + 6000 (1.05)^0 = 19,190.76$$
+
+### Present Value
+
+> $$PV = FV(1+r)^{-N} \text{(if dealing with different time ranges)}= FV (1+r_s/m)^{-mN}$$
+
+Ex: Find PV if disc. rate = 8%, where FV = 100k
+$$PV = 100k(1.08)^{-6} = 63,016.96$$
+
+Ex: What is the value 4 years from now if $r=8\%$, where FV at $t=10% is 100,000?
+We only have to care about the timespan between that timepoint to the timepoint of the FV, so:
+$$PV_{t_4}=100k(1.08)^{-6} = 63,016.96 = 100k(1.08)^{-10}(1.08)^{4}$$
+
+### Frequency & PV
+
+Ex: FV = $5M @ $t_{10}$, $r=6\%$, compounded monthly
+$$PV = frac{5M}{(1+0.06/12)^{12\times 10}} = 2,748,163.67$$
+
+## Present Value of a Series of Cash Flow
+
+> An annuity (series of equal payments made at regular intervals) has four characteristics:
+>
+> 1. Finite set of payments
+> 1. Level cash flow
+> 1. Sequential cash flow
+> 1. $t_1 = CF_1$
+
+We have
+> $$PV = A \left[\frac{1-(1+r)^{-N}}{r}\right]$$
+
+For an Annuity Due, first payment at $t=0$, so we don't have to discount the first payment
+
+Ex: We are offered two payment option:
+
+1. 2M @ $t=0$
+1. $200k/yr, $t_0 - t_{19}$ (i.e. 20 payments) with $r=7\%$
+
+The second option is an *annuity due*, because the first payment is at $t=0$. What is the PV of the second option?
+$$PV = 200k \left[\frac{1-(1.07)^{-19}}{.07}\right] + 200k = 2,267,119.05$$
+
+Ex: We are an investment manager, we have to pay 1M each year for 30 years, beginning on $t=10$. Find PV for $r=5\%$.
+
+We can start with annuity due if we consider our start is at $t=10$, but it is easier if we convert this into an Ordinary Annuity, if we consider our start at $t=9$. So at this $t=9$, we have an ordinary 30-year annuity and
+
+$$PV_9 = 1M\left[\frac{1-1.05^{-30}}{.05}\right] = 15,372,451.03.$$
+Then we have
+
+$$PV = PV_0 = \frac{PV_9}{(1.05)^9} = 9,908,219.$$
+
+## Perpetuity
+
+> A perpetuity has 3 properties:
+>
+> 1. Level CF
+> 1. Sequential 
+> 1. Infinity (i.e $N\to\infty$)
+
+We have
+
+>$$PV = \frac{A}{r}$$
+
+Ex: Perpetuity investment $100/year at $r=5\%$. How much would you pay today?
+$$PV = \frac{A}{r} = \frac{100}{.05} = \$2000$$
+
+Ex: Perpetuity investment $100/year, but you won't receive money until $t=5$. How much would you pay for it today i.e. PV?
+
+We first find $PV_4$, PV of a perpetuity starting at $t=4$:
+$$PV_4 = \frac{100}{.05} = 2000$$
+
+Then we find PV from this:
+$$PV = \frac{PV_4}{(1.05)^4} = \frac{2000}{1.05^4} = 1,645.40$$
