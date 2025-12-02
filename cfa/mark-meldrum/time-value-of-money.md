@@ -249,3 +249,66 @@ Then we find PV from this:
 $$PV = \frac{PV_4}{(1.05)^4} = \frac{2000}{1.05^4} = 1,645.40$$
 
 Continue at 1:30:26
+
+## More problems: Solve for $r$, $N$, or $PMT$
+
+### Solve for $r$
+
+We have
+$$FV_N = PV(1+r)^n$$
+$$\left(\frac{FV_N}{PV}\right)^{1/N} = 1 + r$$
+$$r = \left(\frac{FV_N}{PV}\right)^{1/N} - 1$$
+
+Ex: A company in 1998 makes 8,436 in sales, in 2002 makes 8,445 in sales. What is their sales growth rate?
+
+$$r = \left(\frac{8445}{8436})^{1/4}\right) - 1 \approx .03\%$$
+
+### Solve for $N$
+
+$$FV = PV(1+r)^N$$
+$$\frac{FV}{PV} = (1+r)^N$$
+$$\ln\left(\frac{FV}{PV}\right) = N\ln(1+r)$$
+$$N = \frac{\ln\left(\frac{FV}{PV}\right)}{\ln(1+r)}$$
+
+Ex: At $t=0$, $PV = \$10M$. At which $t$ will $FV=\$20M$, knowing that $r=7\%$
+
+$$N = \frac{\ln(2)}{\ln(1.07)} = 10.24 yrs$$
+
+### Solve for $PMT$
+
+Ex: Let's say we have a $120,000 house. Buyer puts $20,000 down for a 30-yr mortgage at 8\%. What should their PMT be?
+
+Again, we have
+
+$$PV = A\left[\frac{1-(1+r)^{-N}}{r}\right]$$
+
+
+$$100k = A\left[\frac{1-(1.006677)^{-360}}{.006667}\right]$$
+$$A = 733.76$$
+
+## An example to tie all these stuff together
+
+Ex: Jane Doe is currently age 22, planning for retirement at age 63. She plans to save 2k a year every year for the next 15 yrs. She wants to have a retirement income of 100k a year starting at age 63, or $t=41$. How much should Jane save starting from $t=16$ to $t=41$ to make her goal above, provided that $r=8\%$?
+
+We can start with an ordinary annuity at $t=40$ to $t=60$, and another ordinary annuity from $t=0$ to $t=15$.
+
+Step 1: We bring the CF to $t=15$, we have
+
+$$FV_{15} = 2000 \left[\frac{(1.08)^{15} - 1}{0.08}\right] = 54,304.23 = PV_{15}$$
+
+Step 2: We find the present value at $t=40$.
+$$PV_{40} = 100k\left[\frac{1-(1.08)^{-20}}{.08}\right] = 981,814.74$$
+
+Step 3: We find the how much we have to have to achieve our goal at $t=15$. We bring value at $t=40$ back to $t=15$
+
+$$PV_{15} = \frac{981,814.74}{(1.08)^{25}} = 143,362.53$$
+
+Now some thinking, at $t=15$, we will have $54,304.23$, but will require $143,362.53$ to achieve the 100k a year goal starting from age 63. So, at $t=15$, we need to have an extra $89,058.30$.
+
+Then now, we find the PMT from $t=16$ to $t=40$ such that we can get an extra PV of $89,058.30$ at $t=15$.
+
+$$PV = A\left[\frac{1-(1.08)^{-25}}{.08}\right]$$
+$$89,058.30 = A(10.674776)$$
+$$A = \$8,342.87$$
+
+THING TO REMEMBER: This seems complicated, but remember, you just need to **bring all money to the same point of time**.
