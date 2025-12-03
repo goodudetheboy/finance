@@ -55,11 +55,11 @@ $$Investment = PV (CF)$$
 Let's say for our project/investment, we have maintenance paid every some period of time.
 ![alt text](image/1-maintenance-investment-for-irr.png)
 
-This will usually mean there will be more than 1 IRR.
+This will usually mean there will be more than 1 IRR. In this case, IRR won't work, **go with NPV** instead.
 
 > Investment Rule: If IRR > WACC, Accept, else Reject
 
-## Examples
+### Examples
 Ex: Let's say we invest $\$1M$ for a perpetuity of $\$150k$, with a WACC of $10\%$. What's the IRR?
 
 To find IRR, let
@@ -102,3 +102,42 @@ Accept!
 > These two rules using NPV and IRR to decide an investment is worth it are NOT interchangeable. Good rule of thumb: When IRR & NPV differs, choose the NPV side!
 
 Continue at 18:45
+
+## Portfolio Return
+
+Let's say we buy an asset at price $P_0$, and sell at price $P_1$, then Holding Period Return $HPR = \frac{P_1-P_0}{P_0}$.
+
+Let's say while we're holding that asset, we receive CF of D_1, then $HPR = \frac{P_1 - P_0 + D_1}{P_0}$.
+
+Question: How to calculate HPR if:
+
+- payment spans several periods: Called money-weighted rate of return
+- P_0 includes multiple additions/withdrawals: Called time-weighted rate of return
+
+Solution: Use IRR, accounts for timing/amounts of in/outflows
+
+### Money-weighted rate of return
+
+More emphasis on year with more funds invested. BUT: investors decide that, not management.
+
+### Time-weighted rate of return
+
+> Def: measures the compounded rate of growth of $1 over the measurement period
+
+![alt text](image/2-time-weighted-return-ex.png)
+
+We then have
+
+$$(1+twrr)^n = (1+HPR_1)(1+HPR_2)\cdots(1+HPR_n)$$
+
+Ex: Year 1, we make 15%, year 2, we make 6.67%.
+
+We have:
+
+$$(1+twrr)^2 = (1+HPR_1)(1+HPR_2)$$
+$$(1+twrr)^2 = (1.15)(1.0667)$$
+$$ twrr = \sqrt{(1.15)(1.0667)} - 1 = 10.76\%$$
+
+This is more preferred than MWRR.
+
+Continue at 30:50
