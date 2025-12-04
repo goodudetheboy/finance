@@ -220,7 +220,7 @@ $$r = \frac{2}{100} \times \frac{360}{150} = 4.8\%$$
 
 Rearranging the Bank Discount Basis:
 
-$$D = F \cdot \frac{t}{360}\cdot r
+$$D = F \cdot \frac{t}{360}\cdot r$$
 
 Note:
 
@@ -228,3 +228,48 @@ Note:
 - 360-day count convention, not 365
 - annualized with simple, not compound interest
 
+We have
+$$HPR = \frac{P_1-P_0+D_1}{p_0} = \frac{100-98}{98} = 2.0408\%$$
+
+**FOR a 150-day period**, NOT annualized. Turn that to annual rate, we turn it into Effective Annual Yield
+
+> Effective Annual Yield: $$EAY = (1+HPR)^{365/t} -1$$
+
+$$EAY = (1.020408)^{365/150} - 1 = 5.0388\%$$
+
+> Money Market Yield: $$r_{mm} = \frac{360 \cdot r_{BD}}{360-r_{BD}}$$
+> Note that this requires the bank discount rate $r_{BD}$
+
+$$r_{mm} = \frac{360(.048)}{360 - 150(.048)} = 4.98%$$
+
+ This is pretty cumbersome to use, we can do instead:
+
+> $$r_{mm} = HPY(360/t)$$
+
+$$ = 2.0408(360/150) = 4.8986\%$$
+
+Ex: We have a $1000 T-Bills for 150 days. What is the PV? We have:
+
+- HPY = 2.0408%
+- BDY = 4.8%
+- MMY = 4.898%
+- EAY = 5.08388%
+
+Question is, which $r$ do we use?
+
+- HPY is not annualized => since we're working with 150 days, then here's your pick!
+
+$$PV = \frac{100}{1.020408} = \$980$$
+
+- BDY? NO, this is based on par, not investment
+- MMY? We can! Can just derive from annual to 150-day basis
+
+$$r_{mm} = HPY(360/t)$$
+
+$$ HPY = \frac{t}{360}\cdot r_{mm} = \frac{150}{360} \cdot .04898 = 2.0408\%$$
+
+- EAY? We can! We can derive HPY from this. Solve this
+
+$$.050388 = (1+HPY)^{365/150}-1$$
+
+and you can get your HPY to extract the PV.
