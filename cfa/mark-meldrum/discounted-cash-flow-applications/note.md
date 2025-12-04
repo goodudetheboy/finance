@@ -141,3 +141,90 @@ $$ twrr = \sqrt{(1.15)(1.0667)} - 1 = 10.76\%$$
 This is more preferred than MWRR.
 
 Continue at 30:50
+
+Ex: Suppose we have four quarters:
+
+Quarter | $Q_1$ | $Q_2$ | $Q_3$ | $Q_4$
+--- | --- | --- | --- | ---
+Beginning Value (millions) | 4 | 6 | 5.775 | 6.72
++/- | 1 | 0.5 | 1 | .225 | (.6)
+Total Investment | 5 | 5.5 | 6 | 6.12
+Ending Value | 6 | 5.775 | 6.72 | 5.508
+HPR | .2 | .05 | .12 | -.1
+
+Then we have TWRR (the power of the $(1+twrr)$ has to be in YEARS, not HOLDING PERIODS!!!):
+$$(1+twrr)^1 = (1.2)(1.05)(1.12)(.9)$$
+$$twrr = (1.2)(1.05)(1.12)(.9) - 1 \approx 27\%$$
+
+### Comparing MWRR and TWRR side-by-side
+
+>**Question**: If a company pays an $X dividends, does not the price of the stock drops by the amount of the dividends?
+>
+>**Answer**: Stock drops not on the day of dividend, but on the EX-dividend date (first day a stock trades without its most recently declared dividend), which might have already long gone before the divident payout date.
+Jan 1, Firm A has market value $100M.
+
+From Jan 1 and Apr 30, shows a gain of $10M.
+
+Apr30 we have market value $110M. Also pays a dividend of $2M, and all dividends are reinvested in the company. Also, institutions invest another 20M.
+
+Total AUM on Apr30: 132M
+
+Dec 31: stock pays dividends of 2.64M. Market value currently (not including the dividends) is 140M.
+
+![alt text](image/3-twrr-vs-mwrr-ex.png)
+
+$HPR_1$ (Jan1 - Apr30): $\frac{110-100+2}{100} = 12\%$
+
+$HPR_2$ (Apr30 - Dec31): $\frac{140-132+2.64}{132} = 8.06\%$
+
+We have, for TWRR
+
+$$twrr = (1.12)(1.0806) - 1 = 21.03\%$$
+
+We have, for MWRR
+
+![alt text](image/4-twrr-vs-mwrr-ex-1.png)
+
+We have:
+
+$$CF_0 = 100$$
+$$CF_1 = -20$$
+$$CF_2 = 0$$
+$$CF_3 = 142.64$$
+
+$$IRR_{period} = 6.28\%/\text{per period}$$
+
+$$(1.0628)^3 - 1 = .200479 = \approx 20\%$$
+
+## Money Market Yields
+
+> Anything later referred to as MM Yield has:
+>
+> - Life of less than 1 year
+> - Sold at discount basis
+> - Mature at par
+> - 360-day count convention
+>
+
+### T-Bills
+
+Quoted on a Bank Discount Basis
+
+> Bank Discount Basis: $$r = \frac{Discount}{Face Value} \times \frac{360}{Time}$$
+
+Ex: 150-day T-Bill at 98.
+
+We have $Discount = 98 - 100 = 2$. Then
+
+$$r = \frac{2}{100} \times \frac{360}{150} = 4.8\%$$
+
+Rearranging the Bank Discount Basis:
+
+$$D = F \cdot \frac{t}{360}\cdot r
+
+Note:
+
+- Yield is based on par (the money you will receive at maturity), not on price (the money you invest)
+- 360-day count convention, not 365
+- annualized with simple, not compound interest
+
