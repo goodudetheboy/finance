@@ -112,3 +112,5 @@ Histogram, but lines and points instead of rectangles. Smoother look of what the
 The line has to be ever increasing.
 
 Slope at any interval is proportional to number of observations in that interval.
+
+Continue at 28:30
