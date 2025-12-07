@@ -4,7 +4,7 @@ We want to find a way to describe data. We're not asking questions - we want to 
 
 ## Population (Sample) Data
 
-We can have: H/C, mean, median, mode -> description
+We can have: H/L, mean, median, mode -> description
 
 If we have sample data, and we make forecasts to the domain where we don't have population data, that's called "forecasting" and "inferring". This is called inferential.
 
@@ -103,8 +103,12 @@ Make sure to leave no gaps between your different categories if there are no gap
 
 ![alt text](image/5-example-for-frequency-polygon.png)
 
+Histogram, but lines and points instead of rectangles. Smoother look of what the distribution is like.
+
 #### Cumulative Frequency Distribution
 
 ![alt text](image/6-example-for-cfd.png)
+
+The line has to be ever increasing.
 
 Slope at any interval is proportional to number of observations in that interval.
