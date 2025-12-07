@@ -97,7 +97,7 @@ Ex: Let's take the data from the example we have in the above section.
 
 ![alt text](image/4-example-for-histogram.png)
 
-Make sure to leave no gaps between your different categories, if you do, it often means no observations in that category.
+Make sure to leave no gaps between your different categories if there are no gaps between the categories; if you do, it often means no observations in that category.
 
 #### Frequency Polygon
 
