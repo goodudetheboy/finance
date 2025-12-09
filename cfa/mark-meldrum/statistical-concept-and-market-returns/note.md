@@ -197,3 +197,18 @@ $$.7(.10) + .3(.08) = .07 + .024 = 9.4$$
 >
 > Definition: most used to average "rates of change"  (i.e. growth rate of a variable)
 > $$G = \sqrt[n]{x_1 x_2 x_3 \cdots x_n}$$
+
+To avoid $x_i < 0$, add 1 to each $x_i$ (expressed as decimal)
+
+Ex: 
+![alt text](image/7-example-for-geometric-mean.png)
+
+Then $G = \sqrt[5]{(.984)(1.317)(1.074)(.874)(.876)} = 1.012792 - 1 = 1.279\%$
+
+> General Formula:
+> $$1 + R_G = \sqrt[T]{(1+R_1)(1+R_2)\cdots(1+R_T)}$$
+> $$1 + R_G = \left[\Pi^T_{t=1}(1+R_t)\right]^{1/T}$$
+> Then:
+> $$R_G = \left[\Pi^T_{t=1}(1+R_t)\right]^{1/T} - 1$$
+
+
