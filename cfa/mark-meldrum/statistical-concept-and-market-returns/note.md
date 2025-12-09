@@ -114,3 +114,86 @@ The line has to be ever increasing.
 Slope at any interval is proportional to number of observations in that interval.
 
 Continue at 28:30
+
+## Measures of Central Tendency
+
+We would like to explore what does the data MEAN, what it's SAYING, other than what it APPEARS to be.
+
+> Quantitative (measures of location)
+>
+> Definition: Measures of central tendency => specifies whether the data are centered
+
+### Arithmetic Mean
+
+> Population mean
+>
+> Definition: mean of a population (which is a **parameter**), defined by
+> 
+> $$\mu = \frac{\sum^N_{i=1} x_i}{N}$$
+
+Using $\mu$, this means a mean of a POPULATION, no question.
+
+> Sample mean
+>
+> Definition: mean of a sample (which is a **sample mean**), defined by
+>
+> $$\bar{x} = \frac{\sum^n_{i=1} x_i}{n}$$
+
+Note the change in notation, the sample mean is $\bar{x}$. Remember that you have to keep notation consistent.
+
+Ex: Let's say you have a college class of Aug, Fall 2016. This is a POPULATION. This population contains N sections. The average of this population is
+
+$$\mu = \frac{\sum^{N}_{i=1} x_i}{N}$$
+
+This is called a **cross-sectional mean**. A use for this is comparing Professor/section, by comparing each section to the cross-sectional mean of the population.
+
+We have a time series data for section 1 from 2016-2011. The mean of this data is called the **time-series mean**.
+
+#### Misconception
+
+The mean does not mean (pun not intended) 50% of the observation, this means deviations from the mean sum to zero.
+
+### Median
+
+> Median
+>
+> Definition: Value in the middle ("middlemost")
+
+Now THIS does mean there are 50% above and 50% below. How to calculate it?
+
+- If $n$ is odd, then median = $\frac{n+1}{2}$th
+- If $n$ is even, then median = $\frac{n/2 + (n+1)/2}{2}$
+
+### Mode
+
+> Mode
+>
+> Definition: Most frequently occuring observation, which can include
+>
+> - Unimodal: 1 mode
+> - Bimodal: 2 modes
+> - No mode
+
+Fun fact, if you want to catch cheaters, check bimodal mean, if there are peak very close to 100, then very likely there are cheaters.
+
+> Mode is the only measure of central tendency that can be used with nominal (categorical) data.
+
+### Weighted mean
+
+> Weighted mean
+>
+> Definition: Different weights for different observations.
+>
+> $$\bar{X}_w = \sum^n_{i=1} w_i x_i$$
+> where $\sum^n_{i=1} w_i = 1$.
+
+Ex: If we have $100M, 70% in equities with 10% ROI, and 30% in bonds with 8% ROI. The weighted ROI for this is:
+
+$$.7(.10) + .3(.08) = .07 + .024 = 9.4$$
+
+### Geometric mean
+
+> Geometric mean
+>
+> Definition: most used to average "rates of change"  (i.e. growth rate of a variable)
+> $$G = \sqrt[n]{x_1 x_2 x_3 \cdots x_n}$$
