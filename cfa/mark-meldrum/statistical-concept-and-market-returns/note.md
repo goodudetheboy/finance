@@ -255,3 +255,5 @@ Nuh-uh. Compared to
 $$R_G = \sqrt{2}\sqrt{.5} - 1 = 0$$
 
 Which looks more like it. Note that to get the true returns use Geometric Mean. Arithmetic can be skewed and not the big picture.
+
+Continue at 1:01:41
