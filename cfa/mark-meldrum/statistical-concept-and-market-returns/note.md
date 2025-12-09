@@ -211,4 +211,47 @@ Then $G = \sqrt[5]{(.984)(1.317)(1.074)(.874)(.876)} = 1.012792 - 1 = 1.279\%$
 > Then:
 > $$R_G = \left[\Pi^T_{t=1}(1+R_t)\right]^{1/T} - 1$$
 
+### Comprehensive Example
 
+We have two funds with the following returns:
+
+![alt text](image/8-example-of-two-funds.png)
+
+We have $R_G$ of `SLASX`:
+
+$$ R_G = [(1.162)(1.203)(1.093)(.889)(.83)]^{1/5} - 1 = 2.43\%$$
+
+This means that 1 dollar invested in PRFDX in 1998 grows to $(1.0243)^5 = 1.127$ by 2002.
+
+Note for $R_A$:
+
+$R_A = \frac{9.2+3+13.1+1.6-1.13}{5} = 2.78%$
+
+We have $R_G$ of `PRFDX`:
+
+$$R_G = [(1.092)(1.03)(1.131)(1.016)(.87)]^{1/5} - 1 = 2.37\%$$
+
+This means that 1 dollar invested in PRFDX in 1998 grows to $(1.0237)^5 = 1.244$ by 2002.
+
+Note for $R_A$:
+
+$R_A = 3.54\%$
+
+> If you want to look at the growth in your money over the years, you have to take a look at your Geometric Mean
+
+Some things to keep in mind:
+
+> It's always $R_G \leq R_A$, where the case of $R_G = R_A$ only if all observation are equal.
+> Also, $R_G < R_A$ more and more as std increases
+
+Ex: We have at the beginning, we have $100, then at end of year 1, we have 200, coming to 100% return. At the end of year 2, we have 100, so we have -50% return from year 1 to year 2.
+
+Let's do some comparison:
+
+$$R_A = \frac{100-50}{2} = 25\%$$
+
+Nuh-uh. Compared to
+
+$$R_G = \sqrt{2}\sqrt{.5} - 1 = 0$$
+
+Which looks more like it. Note that to get the true returns use Geometric Mean. Arithmetic can be skewed and not the big picture.
