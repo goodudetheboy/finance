@@ -257,3 +257,109 @@ $$R_G = \sqrt{2}\sqrt{.5} - 1 = 0$$
 Which looks more like it. Note that to get the true returns use Geometric Mean. Arithmetic can be skewed and not the big picture.
 
 Continue at 1:01:41
+
+### Harmonic Mean
+
+Very limited application
+
+> Harmonic mean
+>
+> Definition: Average ratios => but only when they are repeatedly applied to a fixed quantity to yield a variable # of units
+>
+> $$\bar{X}_H = \frac{n}{\sum^n_{i=1} (1/x_i)}$$
+
+Ex: You put $1000 in a fund per period every 2 months. Then harmonic mean
+
+$$\bar{X}_H = \frac{2}{1/10+1/15} = 12$$
+
+### Quantiles
+
+Rank data from max to min, then we have quantiles:
+
+- 50:50 split => median
+- 25:25:25:25 split => quartile
+- 20:20:20:20:20 split => quintile
+- 10:10:...:10 => deciles
+  - Very typical in economics
+- 1:1:...:1 => percentiles
+  - If you're in yth percentile, (100-y)% of observation lies above you
+  - E.g.: scores in an exam
+
+Locating percentiles
+
+$$L_y = (n+1) \frac{y}{100}$$
+
+$y$ being the percentage point of interest. $L_y$ may not be a whole number.
+
+If $L_y$ is not whole number, we can use linear interpolation. If $obs_12 = 20$ and $obs_13 = 30$, then
+
+$$obs_{12.75} = 12 + 0.75 (30-20) = 27.5$$
+
+### Dispersion
+
+#### Range
+
+> Range
+>
+> Definition: Max - min => extrteme values (called outliers) may distort the range.
+
+#### Mean Aboslution Deviation
+
+> Mean Absolute Deviation
+>
+> Definition: The mean of all the deviation of the obsevation from the mean
+> $$MAO = \sum^n_{i=1} \frac{|x_i-\bar{x}}{n}$$
+
+#### Variance and Standard Deviation
+
+> Variance
+>
+> Definition: $$\sigma^2 = \frac{\sum^N_{i=1} (x_i - \mu)^2}{N}$$
+
+The standard deviation is just the root of variance
+
+> Standard Deviation
+>
+> Definition: $$\sigma = \sqrt{\sigma^2}$$
+
+Then for Sample 
+
+> Sample variance
+>
+> Definition: With $n-1$ be the minimum of independent ways a system can vary, we have $$S^2 = \frac{\sum^n_{i=1} (x_i - \bar{x})^2}{n-1}$$
+
+Then the sample std
+
+> Sample Standard Deviation
+>
+> Definition: $$S = \sqrt{S^2}$$
+
+Since $\sum(x_i-\bar{x}) = 0$, if we know values of $n-1$ obs, we can calculate the last => the last one is not independent.
+
+> Note: $MAD \leq S$, since $S$ gives more weight to larger deviations than smaller ones.
+
+> $S$ measures dispersion around the arithmetic mean. For geometric mean,
+>
+> $$\sigma^2_g = e^{A}$$
+> where
+> $$A = \frac{\sum^n_{i=1}(\ln \frac{A_i}{\mu_g})^2}{N}$$
+
+#### Semivariance
+
+How to find this
+
+1. Find $\bar{x}$
+1. Select all $obs \leq \bar{x}$
+1. $s^2 = \sum(x_i-\bar{x})/(n-1)$ for all $x_i < \bar{x}$. Use full dataset $n$, not just $obs \leq \bar{x}$!!!
+
+#### Semideviation
+
+How to find this: $s = \sqrt{s^2}$, simple as that.
+
+#### Target Semivariance
+
+> Target Semivariance
+>
+> Definition: For all $x_i < B$, where $B$ is target value.
+> $$s^2 = \sum(x_i - B)/(n-1)$$
+> 
