@@ -362,4 +362,66 @@ How to find this: $s = \sqrt{s^2}$, simple as that.
 >
 > Definition: For all $x_i < B$, where $B$ is target value.
 > $$s^2 = \sum(x_i - B)/(n-1)$$
-> 
+>
+
+### Chebyshev's inequality
+
+> Chebyshev's inequality
+>
+> Definition: Minimum proportion of obs within $k$ std of the arithmetic mean. For all $k > 1$:
+> $$1 - \frac{1}{k^2}$$
+
+This formula doesn't care regardless of how the data are distributed. For the following $k$ std, we can expect a minimum of the value on the right to be within the std range.
+
+![alt text](image/9-k-chart-for-chebyshev-inequality.png)
+
+### Coefficient of Variation
+
+> Relative Dispersion
+>
+> Definition: Amount of dispersion relative to a reference value or benchmark.
+
+We arrive at:
+
+> Coefficient of Variation
+>
+> Definition: 
+> $$cv - \frac{s}{x}$$
+>
+> - Corrects for scale
+> - The amount of variability per unit of $\bar{x}$
+>
+> => if $\bar{x}$ is return, the $cv$ is equal to the amount of risk per unit of mean return.
+
+### Sharpe Ratio
+
+> Sharpe Ratio
+>
+> Definition: $$S_h = \frac{\bar{R}_p - \bar{R}_f}{s_p}$$
+>
+> Where:
+>
+> - $\bar{R}_p$: mean return on portfolio $p$
+> - $\bar{R}_f$: mean return on 30-day T-Bills (risk-free rate)
+> - $\bar{R}_p: \bar{R}_f$: mean excess return (over risk-free rate) on portfolio $p$
+> - $s_P$: std of portfolio $p$
+>
+
+If we are given a portfolio charted on risk-return graph, how do we know which portfolio returns the best return?
+
+![alt text](image/10-sharpe-ratio-portfolio.png)
+
+For the same $\sigma$, portfolio $b$ offers the highest return. As far as this is concerned, what we would like is
+
+- High Sharpe Ratio
+- Low coefficient of variation
+
+Some conditions for using Sharpe Ratio
+
+- $S_h > 0$
+- return distributions are approx symmetrical
+  - Some option strats have asymmetrical distributions, so Sharpe ratio is not applicable for this one here
+  - Options have limited loss but unlimited gain
+  - More reasons from Google AI: The Sharpe Ratio assumes symmetrical (normal) returns because it uses standard deviation, a measure of total volatility, as its risk proxy; but standard deviation treats upside (good) and downside (bad) swings equally, which misrepresents risk for asymmetric distributions (like those with fat tails or skewness) where investors fear losses more than they value gains, making the ratio misleading for strategies with non-normal risk profiles (e.g., hedge funds). 
+
+Continue at 1:42:00
