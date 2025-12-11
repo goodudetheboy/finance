@@ -425,3 +425,91 @@ Some conditions for using Sharpe Ratio
   - More reasons from Google AI: The Sharpe Ratio assumes symmetrical (normal) returns because it uses standard deviation, a measure of total volatility, as its risk proxy; but standard deviation treats upside (good) and downside (bad) swings equally, which misrepresents risk for asymmetric distributions (like those with fat tails or skewness) where investors fear losses more than they value gains, making the ratio misleading for strategies with non-normal risk profiles (e.g., hedge funds). 
 
 Continue at 1:42:00
+
+### Skewness
+
+> Skewness
+>
+> Definition: Degree of symmetry in a return distribution.
+>
+
+A symmetrical skewness would be normal distribution
+
+- mean = median
+- completely described by 2 parameters $\mu$ & $\sigma^2$
+
+A non-symmetrical skewness, while limited but frequent, has two type:
+
+- positive sknewness
+  - mode < median < mean
+  - Return distribution of long calls or puts might be positively skewed
+- negative skewness
+  - mode > median > mean
+  - Return distribution of short calls or puts might be positively skewed
+
+> Calculation:
+> $$s_k = \left[\frac{n}{(n-1)(n-2)}\right] \frac{A}{s^3}$$
+> where $A = \sum^n_{i=1} (x_i - \bar{x})^3$. Note that as n grows, it becomes $\frac{1}{n-3}$
+
+If skewness = 0, this means average magnitude of positive deviations = average magnitude of negative deviations
+
+- AKA symmetrical distribtion
+
+If < 0:
+- average magnitude negative deviation > average magnitude positive deviation
+
+If > 0:
+- opposite
+
+Note: For $n > 100$, $S_k \pm .5$ would be considered large.
+
+### Kurtosis
+
+> Kurtosis
+>
+> Definition: Peakness of the distribution, how tall it is, how squished together it is. Kurtosis
+>
+> - Greater than normal: leptokurtic ($K > 3, K_E > 0$, where $K_E$ is excess kurtosis)
+> - Equal to normal: mesokurtic ($K = 3$)
+> - Less than for normal: platykurtic
+>
+> Calculation
+>
+> $$K_E = \left[\frac{n(n+1)}{(n-1)(n-2)(n-3)} \frac{\sum^n_{i=1}(x_i - \bar{x})^4}{s^4}\right] - \frac{3(n-1)^2}{(n-2)(n-3)} $$
+> as $n$ goes larger
+> $$\approx \left[\frac{1}{n}\frac{\sum^n_{i=1}(x_i - \bar{x})^4}{s^4}\right] - 3$$
+
+Note that: $\frac{n(n+1)}{(n-1)(n-2)(n-3)}$ goes to $\frac{1}{n-7}$ as $n$ gets large
+
+$K_E > 1$ is considered large.
+
+## Geometric vs Arithmetic
+
+Let's understand the difference between this intuitively. Let's say year 1 nets us +40%, year 2 nets us -40%. That means if we have $100 in year 1, we would have 140 Y1, and 84 Y2. Then, the mean return for each are
+
+$$R_A = \frac{40-40}{2} = 0$$
+
+(clearly wrong)
+
+$$R_G = \sqrt{(1.4)(1.6)} - 1 = -8.35\%$$
+
+(sounds better)
+
+Here, $R_G$ provides a constant annualized change in wealth that **actually occured** (as if wealth grew at a constant rate of return)
+
+It's when we start using this for Future return to see why $R_G$ does not work.
+
+![alt text](image/11-future-return-geoemtric-vs-arithmetic.png)
+
+Above we have the probability of gaining or losing 40% over each year. The expected value for each year is still $100.
+
+Question: If we want to make this investment and get this distribution of returns we will get, we have to try to bring the Expected Value back to the Present Value to see if it's worth it or not.
+
+But what $r$ do we use? $R_A$ definitely makes more sense now.
+
+> Rule of thumb: Mean return to use and when
+>
+> - $R_A$
+>   - For returns in the **future**
+> - $R_G$
+>   - For returns in the **past**
