@@ -232,5 +232,42 @@ Now, note that the probability we get for $ABC$ going up or down is empirical, b
 
 > Total Probability Rule
 >
-> Definition: Probability of $A$ is the total probability of $A$ given all scenarios $S_1, S_2\cdots S_n$ for a finite $n$.
+> Definition: Probability of $A$ is the total probability of $A$ given all scenarios $S_1, S_2\cdots S_n$ for a finite $n$
+>
 > $$P(A) = P(A|S_1)P(S_1) + P(A|S_2)P(S_2) + \cdots P(A|S_n)P(S_n)$$
+>
+> In the case that $A$ is independent from $S_i$, then:
+>
+> $$P(A) = P(A)P(S_1) + P(A)P(S_2) + \cdots P(A)P(S_n)$$
+> $$= P(A) [P(S_1) + P(S_2) + \cdots P(S_n)]$$
+> $$= P(A)$$
+
+## Expected Value
+
+> Expected Value
+>
+> Definition: For $\sum^n_{i=1} P(X_i) = 1$,
+>
+> $$E(X) = P(X_1)X_1 + P(X_2)X_2 + \cdots + P(X_n)X_n$$
+> $$ = \sum^n_{i=1} P(X_i)X_i$$
+
+Ex: EPS forecast
+
+EPS | P(x)
+-- | --
+2.60 | .15
+2.45 | .45
+2.20 | .24
+2.00 | .16
+
+Then
+
+$$E(X) = .15(2.6) + .45(2.45) + .24(2.2) + .15(2) = 2.3405$$
+
+### Variability of distribution of probability
+
+We can use Variance:
+
+$$\sigma^2(X) = E\left\{[X-E(X)]^2\right\}$$
+
+Continue at 1:12:34
