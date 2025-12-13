@@ -177,3 +177,5 @@ $$P(A|B) = P(A)$$
 so
 
 $$P(AB) = P(A)P(B)$$
+
+Continue at 40:10
