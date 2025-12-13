@@ -179,3 +179,58 @@ so
 $$P(AB) = P(A)P(B)$$
 
 Continue at 40:10
+
+Ex: We have two events:
+
+- A: $EPS_{t+1} > EPS_t$ and $P(A) = .55$ based on historical observation
+- B: $EPS_{t+1} < EPS_t$ and $P(B) = .45$ based on historical observation
+
+These are called empirical probabilities because they are independent events
+
+Calculate
+
+$$P(EPS_{Q3} > EPS_{Q2} | EPS_{Q2} > EPS_{Q1})$$
+
+$$= P(EPS_{t+1} > EPS_{t}) = .55$$
+
+since the two events are independent.
+
+Calculate
+
+$$P(EPS_{t+2} < EPS_{t+1} \wedge EPS_{t+1} < EPS_t)$$
+
+$$= P(EPS_{t+2} < EPS_{t+1}) \cdot P(EPS_{t+1} < EPS_t) = .45 \times .45 = .2025$$
+
+since the two events are independent.
+
+## Total Probability Rule
+
+Let's say we have a scenario:
+
+![alt text](image/2-total-probability-rule-example.png)
+
+We have:
+
+$$P(A) = P(ABC_{up} \wedge Expansion) + P(ABC_{up} \wedge Recession) (*)$$
+
+Let:
+
+- A: the probability of $ABC$ going up ($ABC_{up}$)
+- S: the probability of an expansion ($Expansion$)
+- S^c: the probability of a recession ($Recession$), the compliment of $S$
+
+It must be true that
+
+$$P(S) + P(S^c) = 1$$
+
+Then:
+
+$$(*) = P(AS) + P(AS^c) = P(A|S)P(S) + P(A|S^c) P(S^c)$$
+
+Now, note that the probability we get for $ABC$ going up or down is empirical, but the probability of an $Expansion$ or $Recession$ is subjective.
+
+
+> Total Probability Rule
+>
+> Definition: Probability of $A$ is the total probability of $A$ given all scenarios $S_1, S_2\cdots S_n$ for a finite $n$.
+> $$P(A) = P(A|S_1)P(S_1) + P(A|S_2)P(S_2) + \cdots P(A|S_n)P(S_n)$$
