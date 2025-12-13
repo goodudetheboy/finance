@@ -129,4 +129,51 @@ For the $A$ OR $B$ case:
 
 $$P(A\vee B) = P(A) + P(B) - P(AB)$$
 
+Ex:
 
+-- | Period 2 win ($C$) | Period 2 loss ($D$)
+-- | -- | --
+Period 1 win ($A$) | $52.7\%$ (1) | $47.3\%$ (3)
+Period 1 loss ($B$) | $47.3\%$ (2) | $52.7\%$ (4)
+
+Then we have the following event:
+
+- (1): $P(C|A)$
+- (2): $P(C|B)$
+- (3): $P(D|A)$
+- (4): $P(D|B)$
+
+Question: Calculate $P(BD)$
+
+$$P(BD) = P(D|B) P(B) = 52.7\% \cdot 50\% = 26.4\%$$
+
+Ex: $P(A) = .35$ and $P(B) = .25$, where $A$ is limit order filled at 10, and $B$ is limit order filled at 9.75
+
+$$P(A \vee B) = P(A) + P(B) - P(AB) = .35 + .25 - P(AB) (*)$$
+
+How do we get $P(AB)$?
+
+- Notice that logically, if $A$ happens then $B$ won't, but if $B$ happens, then $A$ definitely will! So $P(AB) = P(B)$
+
+![alt text](image/1-conditional-probability-example.png)
+
+Then $P(A \vee B) = (*) = .25$
+
+How do we get $P(B|A)$?
+
+$$P(B|A) = \frac{P(BA)}{P(A)} = \frac{.25}{.35} = .714$$
+
+### Independence
+
+> Independence
+>
+> Definition: Occurence of one event says nothing about the occurence of another
+>
+
+Ex: A coin toss. If you get heads the first toss, doesn't tell me anything about the second toss => Independent event. So we have:
+
+$$P(A|B) = P(A)$$
+
+so
+
+$$P(AB) = P(A)P(B)$$
