@@ -323,3 +323,99 @@ Then $R = 12.55\%$. Then the default risk premium I am willing to take is:
 $$R - R_F = 12.55 - 5.8 = 6.75\%$$
 
 or 675 bp.
+
+## Portfolio $E(R_p)$ and $\sigma^2$
+
+Ex:
+Asset Class | Weights | $E(R)$
+-- | -- | --
+S&P500 | .50 | 13%
+Corp Bonds | .25 | 6%
+EAFE | .25 | 15%
+
+
+> Portfolio weighted returns
+>
+> Definition: $E(R_P)$ is weighted-average of the expected returns on different securities.
+>   $$E(R_P) = w_1 E(R_1) + w_2E(R_2) + \cdots + w_n E(R_n)$$
+
+For the example above:
+
+$$E(R_P) = .5(.13) + .25(.06) + .25(.15) = 11.75\%$$
+
+Portfolio variance is a bit more complicated: not only we have to consider variance on each asset, we also have to consider the combination of different assets can result in more or less variances.
+
+Each assets will have their own variances, but a combination of assets will have their OWN variance. How do we capture this?
+
+  - We use something called a **covariance**
+
+### Covariance
+
+Recall the variance of a random variable is the probability-weighted average of squared deivations. We can use this to calculate our Covariance between two random variables.
+
+
+> Covariance
+>
+> Definition:
+>   $$Cov(R_iR_j) = E[(R_i-E[R_j])(R_j - E[R_J])]$$
+
+Once we have this Covariance, we are ready to calculate the variance of a portfolio.
+
+> Portfolio variance
+>
+> Definition: Let a portfolio contain a collection of random variables $R_i$, then its variance would be
+>$$\sigma^2(R_p) = \sum^n_{i=1}\sum^n_{j=1} w_iw_jCov(R_i)(R_j)$$
+
+Note: If we see our variance of our portfolio too high, which usually means risky, we can add a combination of assets that have NEGATIVE covariance, to bring down our variance, and thus risks.
+
+Ex: 
+Var | $X_1$ | $X_2$ | $X_3$
+-- | -- | -- | --
+$X_1$ | $Var$ | $Cov_{13}$ | $Cov_{13}$
+$X_1$ | $Cov_{21}$ | $Var$ | $Cov_{23}$
+$X_1$ | $Cov_{31}$ | $Cov_{32}$ | $Var$
+
+- If $Cov_{ij} < 0$, we have an inverse relationship
+- If $Cov_{ij} > 0$, we have a positive relationship
+- If $Cov_{ij} = 0$, we have no relationship
+
+With 3 assets, we have $3\times 3 = 9$ entries: 3 Var, 6/2 = 3 Cov, that we have to calculate
+
+> How many Vars and Covs we have to calculate for a portfolio with n assets?
+>
+> With n assets, we have $n\times n = n^2$ entries: $n$ Var, $\frac{n^2-n}{2}$ Cov to calculate
+
+Ex:
+Asset Class | Weights | $E(R)$
+-- | -- | --
+S&P500 | .50 | 13%
+Corp Bonds | .25 | 6%
+EAFE | .25 | 15%
+
+Variance matrix:
+
+A1 | A2 | A3 
+-- | -- | --
+400 | 45 | 189
+45 | 81 | 38
+189 | 38 | 441
+
+Then our portfolio variance is:
+
+$$\sigma^2(R_p) = (.5)^2 400 + (.25)^2 81 + (.25)^2 441$$
+$$ + 2(.5)(.25)45 + 2(.5)(.25)189$$
+$$ + 2(.25)(.25) 38$$
+
+$$ = 100 + 5.0625 + 27.5624$$
+$$ + 11.25 + 47.25 + 4.75$$
+$$= 195.875$$
+
+Note that the our Covariance is POSITIVE, which means the combination of these assets ADD risks.
+
+> Tips:
+>
+> Diversification benefits would increase with decreasing Cov.
+
+Statistically, our goal for diversification would be to find assets to add to our portfolio that would make one of the Cov NEGATIVE.
+
+Continue at 2:01:40
