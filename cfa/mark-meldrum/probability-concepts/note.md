@@ -270,4 +270,56 @@ We can use Variance:
 
 $$\sigma^2(X) = E\left\{[X-E(X)]^2\right\}$$
 
-Continue at 1:12:34
+Let $X_i = [X-E(X)]^2$, then
+
+$$\sigma^2(X) = E(X_i) = \sum^n_{i=1} P(x_i)X_i$$
+
+
+## Conditional Expected Value
+
+> Conditional Expected Value
+> 
+> Definition: 
+>
+>   $$E(X|S) = P(X_1|S)X_1 + P(X_2|S)X_2 + \cdots + P(X_n|S)X_n$$
+>
+> Then:
+>
+>   $$ E(X) = E(X|S) P(S) + E(X|S^c) P(S^c) $$
+
+Ex: Let's say we have the following
+
+![alt text](image/3-conditional-expected-value-example.png)
+
+Let $A$, $B$, $C$, $D$ be the respective case of these happening:
+
+- $P(A) = P(A|S)P(S) = .25 \cdot .60 = .15$
+- $P(B) = .75 \cdot .60 = .45$
+- $P(C) = .6 \cdot .4 = .24$
+- $P(D) = .4 \cdot .4 = .16$
+
+Then:
+
+$$E(EPS|S) = .25 (2.60) + .75(2.45) = 2.4875$$
+$$E(EPS|S^c) = .6(2.20) + .4(2) = 2.12$$
+
+Then:
+
+$$E(EPS) = .6(2.4875) + .4(2.12) = 2.3405$$
+
+Ex: We have an event $X$, where a bond defaults. We have that $P(X) = 0.06$. The current risk free rate is $R_f = 5.8\%$. Let default risk premium be $R-R_f$. We know that if the bond defaults, the expected value $E(bond |X) = \$0$.
+
+Question: What is the minimum risk premium (spread above $R_f$) required?
+
+First we find the expected value of a bond.
+
+$$E(bond) = E(TBill)$$
+$$.06 (0) + .94 (1+R) = 1.058$$
+$$.94 + .94 R = 1.058$$
+$$.94R = .118$$
+$$R = .118/.94 = .1255$$
+
+Then $R = 12.55\%$. Then the default risk premium I am willing to take is:
+$$R - R_F = 12.55 - 5.8 = 6.75\%$$
+
+or 675 bp.
