@@ -419,3 +419,60 @@ Note that the our Covariance is POSITIVE, which means the combination of these a
 Statistically, our goal for diversification would be to find assets to add to our portfolio that would make one of the Cov NEGATIVE.
 
 Continue at 2:01:40
+
+## Correlation
+
+
+0 correlation means no correlation.
+
+> Correlation
+> 
+
+> Definition: Correlation sizes the Covariance and the variance to be between -1 and 1, with 0 being no relationship.
+> $$P(R_i R_j) = \frac{Cov(R_iR_j)}{\sigma(R_i)\sigma(R_j)}$$
+>
+> - Correlation 1 means it's perfectly positive linear relationship
+>   - When you're bullish on a sector, you might buy an oil company and a oil ETF at the same time
+> - Correlation -1 means it's perfectly negative linear relationship
+>   - For example, when you want to hedge your portfolio
+
+![alt text](image/4-correlation-example.png)
+
+We have:
+
+$$P(R_1R_1) = \frac{400}{20\cdot 20} = 1$$
+
+$$P(R_1R_2) = \frac{45}{20\cdot 9} = \frac{45}{180} = .25$$
+
+$$P(R_1R_3) = \frac{189}{20\cdot 21} = .45$$
+
+$$P(R_2R_3) = \frac{38}{9\cdot 21} = .20$$
+
+Ex:
+
+Fund | A | B
+-- | -- | --
+A | 625 | 120
+B | 120 | 196
+
+
+We have $E(R_A) = 20\%$ and $E(R_B) = 12\%$ and $W_A = .75$ and $W_B = .25$
+
+1. Calculate $E(R_p)$
+
+$$E(R_p) = .75(.20) + .25(.12) = .15 + .03 = .18 = 18\%$$
+
+
+2. Calculate correlation matrices
+
+- | A |B
+-- | -- | --
+A | 1 | $\frac{120}{25\cdot 14} = .343$
+B | - | 1
+
+3. Compute $\sigma(R_p)$
+
+$$\sigma^2(R_p) = (.75)^2 (625) + (.25)^2(196) + 2(.75)(.25)(120) = 351.5625 + 12.25 + 45 = 408.8125$$
+
+Then:
+$$\sigma(R_p) = \sqrt{408.8125} = 20.22\%$$
