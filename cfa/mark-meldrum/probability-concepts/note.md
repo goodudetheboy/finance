@@ -476,3 +476,102 @@ $$\sigma^2(R_p) = (.75)^2 (625) + (.25)^2(196) + 2(.75)(.25)(120) = 351.5625 + 1
 
 Then:
 $$\sigma(R_p) = \sqrt{408.8125} = 20.22\%$$
+
+## Joint Probability Function
+
+$P(X, Y)$ not to be confused with $P(X|Y)$
+
+- joint: the probability of $X$ happening along with $Y$
+- conditional: $P(X)$ given that $Y$ has already happened
+
+Ex:
+
+-- | $R_B = 20\%$ | $R_B = 16\%$ | $R_B = 10\%$ | Economy
+-- | -- | -- | -- | -- 
+$R_A = 25\%$ | $.20$ | $0$ | $0$ | good
+$R_A = 12\%$ | $0$ | $.50$ | $0$ | fair
+$R_A = 10\%$ | $0$ | $0$ | $.3$  | poor
+
+Then:
+
+$$E(R_A) = .25(.20) + .12(.50) + .1(.3) = 14\%$$
+$$E(R_B) = .20(.20) + (.16)(.50) + .1(.3) = 15\%$$
+
+What if:
+
+-- | $R_B = 20\%$ | $R_B = 16\%$ | $R_B = 10\%$ | Economy
+-- | -- | -- | -- | -- 
+$R_A = 25\%$ | $.20$ | $.05$ | $.05$ | good
+$R_A = 12\%$ | $0$ | $.45$ | $0$ | fair
+$R_A = 10\%$ | $0$ | $0$ | $.25$  | poor
+
+Then:
+$$E(R_A) = .25(.3) + .12(.45) + .1(.25) = 15.4\%$$
+$$E(R_B) = .20(.20) + .16(.50) + 1(.30) = 15\%$$
+
+Simply, just sum up the row for $A$ and column for $B$ to get the probability for the expected returns.
+
+### Covariance
+
+- | $R_A - E(R_B)$ | $R_B - E(R_B)$ | cross product | $P(R_AR_B)$ | $P(R_A, R_B) [R_{A_i}-E(R_A) \times R_{B_i} E(R_B)]$
+-- | -- | -- | -- | -- | --
+Good | (25 - 14) = 11 | (20 - 15) = 5 | 55 | .2 | 11
+Fair | (12 - 14) = -2 | (16 - 15) = 1 | -2 | .5 | -1
+Poor | (10 - 14) = -4 | (10 - 15) = -5 | 20 | .3 | 6/16
+
+We have that: $E(R_A) = 14\%$ and $E(R_B) = 15\%$
+
+Then: $$Cov(R_A R_B) = \sum^n_{i=1} \sum^n_{j=1} P(R_AR_B) (R_{A_i} - RE_A)(R_{B_j} - ER_B)$$
+
+Since $Cov(R_AR_B) > 0$ means when $R_A > E(R_A)$ than $R_B > E(R_B)$ => this means they covary positively.
+
+## Bayes Formula
+
+![alt text](image/5-bayes-formula-example.png)
+
+$P(S)$ and $P(S^c)$ is prior probability, because it's happening before the fact.
+
+Q: What is the probability of being in an expansion given that $ABC$ goes up? Bayes Formula said:
+
+$$P(S|E) = \frac{P(E|S)}{P(E)} \cdot P(S) = \frac{.8}{.62} \cdot .7 = .90$$
+
+Q: What is the probability of being in an recession given that $ABC$ goes up? Bayes Formula said:
+
+$$P(S|R) = \frac{P(R|S)}{P(R)} \cdot P(S)$$
+
+These are called posterior probability, because this is happening after the fact.
+
+## Principles of Counting
+
+### Multiplication Rule
+
+4 shirts, 5 ties, 3 jackets, 4 pants, how many outfits can you make?
+
+$$4 \times 5 \times 3 \times 4 = 240$$
+
+### Multinomials
+
+15 students split into 3 groups. Group 1 (6), Group 2 (4), Group 3 (6): order does not matter.
+
+## Combinations
+
+> Combinations
+>
+> Definition: Number of ways to select $r$ objects from a group of $n$
+> $$nCr = (n, r) = \frac{n!}{(n-r)! r!}$$
+
+Ex: Choose 3 companies out of a pool of 7 to analyze:
+
+$$(7,3) = \frac{7!}{4!3!} = 35$$
+
+# Permutations
+
+Order matters!
+
+> Permutations
+>
+> Definition: $$nPr = \frac{n!}{(n-r)!}$$
+
+Ex: Choose 3 companies, ranked 1 2 3, from 7 (order now matters), then:
+
+$$(7,4) = \frac{7!}{4!} = 210$$
