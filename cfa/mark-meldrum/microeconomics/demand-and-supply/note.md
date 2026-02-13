@@ -343,4 +343,114 @@ The Dutch Auctions may include both competitive & non-competitive bids. Non-comp
 
 Ex: $90B in T-Bills available, competitive + non-competitive bids
 
-Continue at 57:30
+## Surplus
+
+Q: Why is equilibrium desirable?
+
+
+### Consumer surplus
+
+> Consumer surplus
+>
+> Definition: This is the difference between what a buyer is willing to pay and what they actually pay
+
+Can answer this with consumer surplus, that has to do with demand curve. We can think of a demand curve as a "marginal value curve" (diminishing marginal utility).
+
+![alt text](image/8-consumer-surplus.png)
+
+If the price is lower, than there would be more people willing to pay, creating consumer surplus.
+
+Total expenditure = $P_1 \times Q_1$
+
+AUC is the total value
+
+Ex: $Q^d_x = 180 - 2P_x$. What is consumer surplus if $P_x = 65$.
+
+$$Q^d_x = 180 - 2 (65) = 50$$
+
+Intercept at $Q^d_x = 0$. $2P_x = 180$ then $P_x = 90$. Consumer surplus is:
+
+$$1/2(50)(90-65) = 625$$
+
+### Producer surplus
+
+> Producer surplus
+>
+> Definition: This is the difference between what a seller receives and the minimum they'd accept (cost of production)
+
+Supply curve can be interpreted as a "marginal cost curve" (marginal cost curve is the supply curve for any competitive seller)
+
+**Economic profit** is another term for producer surplus
+
+![alt text](image/9-producer-surplus.png)
+
+Total Variables cost are under the curve. Then Total Revenue = $P_1 \times Q_1$. Producer surplus = $TR - TUC$
+
+Ex: $Q^s_x = -15 + P_x$, what is total producer surplus at $P_1 = 65$?
+
+$Q^s_x = -15 + P_x$, what is total producer surplus at $P_1 = 65$?
+
+$Q^s_x = -15 + 65 = 50$, Intercept $Q^s_x = 0$. Then $15 = P_x$
+
+### Surplus
+
+> Surplus
+>
+> Definition: Total Surplus = consumer surplus + producer surplus (625 + 1250 = 1875)
+
+The way total surplus is divided between consumers and producers depends on the steepness of the demand & supply curves.
+- If $|m_d| > |m_s|$, then consumer surplus > producer surplus, and vice versa
+- Whenever total surplus increases, society gains
+- **Total surplus is maximized at equilibrium.**
+
+ELI5: surplus measures how much of a deal each side _feel_ they get from the transaction. If the price makes both feel good, then everybody is happy. The equilibrium price is the price that maximizes the "deal" feeling for both side, maximizing everybody happiness.
+
+## Market Interference
+
+### Price Ceiling
+
+> Price Ceiling
+>
+> Definition: When politicians decide a market is too high for consumers, for example, rent control. This has a tendency to reduce supply which reduces total surplus.
+
+![alt text](image/10-price-ceiling.png)
+
+- At equilibrium $p^*$:
+  - consumer surplus = a + b
+  - producer surplus = c + d + e
+  - total surplus = a + b + c + d + e => max surplus
+
+- At price ceiling $p_c$, you have less supply with way more demand.
+  - consumer surplus = a+c
+  - producer surplus = e
+  - total surplus = a + c + e
+  - We call b + d **deadweight loss** (benefit to society that is gone)
+
+- Thought there can be extranelity:
+  - Not accounted for by this market
+  - Can be positive or negative
+
+
+### Price Floor
+
+> Price Floor
+>
+> Definition: When politicians decide that the market price is too low (e.g. minimum wage). This has a tendency to reduce demand which reduces total surplus
+
+![alt text](image/11-price-floor.png)
+
+- At equilibrium $p^*$:
+  - consumer surplus = a + b + c
+  - producer surplus = d + e
+  - total surplus = a + b + c + d + e
+
+- At price floor $p_c$:
+  - consumer surplus = a
+  - producer surplus = b + e
+  - total surplus = a + b + e
+  - deadweight loss = c + d
+
+- There can be job loss, but more people has more to spend, this might have positive extranelity somewhere else
+
+
+=> Conclusion: Government intervention, in a theoretical sense, brings deadweight loss to a market, BUT we have to also factor in many factors too. This deadweight loss might be applicable for one particular market, but in a general sense, it might not.
