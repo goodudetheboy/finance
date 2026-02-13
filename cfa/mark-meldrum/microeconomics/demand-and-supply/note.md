@@ -454,3 +454,5 @@ ELI5: surplus measures how much of a deal each side _feel_ they get from the tra
 
 
 => Conclusion: Government intervention, in a theoretical sense, brings deadweight loss to a market, BUT we have to also factor in many factors too. This deadweight loss might be applicable for one particular market, but in a general sense, it might not.
+
+Continue at 1:18:10
