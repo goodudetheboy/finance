@@ -455,4 +455,179 @@ ELI5: surplus measures how much of a deal each side _feel_ they get from the tra
 
 => Conclusion: Government intervention, in a theoretical sense, brings deadweight loss to a market, BUT we have to also factor in many factors too. This deadweight loss might be applicable for one particular market, but in a general sense, it might not.
 
-Continue at 1:18:10
+## Tax
+
+### Tax on Buyers
+
+Before tax:
+
+- consumer surplus a + b + c
+- producer surplus: d + e + f
+
+After tax:
+
+- consumer surplus a
+- producer surplus f
+- gov surplus b + d
+- deadweight loss c + e
+
+![alt text](image/12-tax-on-buyers.png)
+
+### Tax on Sellers
+
+After tax:
+
+- consumer surplus: a
+- producer suprplus: f
+- government surplus: b + d
+- deadweight loss: c + e
+
+![alt text](image/13-tax-on-sellers.png)
+
+Net result: Add intervention / regulation /tax = deadweight loss
+
+Question though: Why do we tax the consumers?
+
+- The consumer pays for it anyway
+- Better to have it visible than invisible
+  - If on the producer, the tax is not visible
+  - If the consumer can see it, they can tell the government they are not happy with it
+  - Can have intervention or less regulation or whatever
+- The idea here is the consumers can have a say in adjusting their levels of surplus
+
+## Elasticity
+
+### Demand
+
+> Elasticity (Demand)
+>
+> Definition: This measures how sensitive quantity demanded is to changes in price
+
+Own price elasticity of demand:
+$$E^d_{Px} = \frac{\% \Delta Q^d_x}{\% \Delta P_x} = \frac{\Delta Q^d_x / Q^d_x}{\Delta P_x / P_x} = \left(\frac{\Delta Q^d_x}{\Delta P_x}\right)\cdot \left(\frac{P_x}{Q^d_x}\right)$$
+
+We have that $Q^d_x = Int - coef P_x$, and $Q^d_x$ is point dependent (this means that you'll have different value depending on what you are on the demand curve)
+
+![alt text](image/14-elasticity-point-dependent.png)
+
+How do we measure the elasticity of demand:
+1. Choose a price $P_x$
+1. Solve for $Q^d_x$
+1. Calculate $P_x / Q^d_x$
+1. Multiply by (-coef)
+
+Ex: We have $Q^d_x = 11200 - 400P_x$. Calculate $E^d_{Px}$ at $P_x = 3$.
+
+$$Q^d_x = 11200 - 400(3) = 10000$$
+$$E^d_{Px} = -400(\frac{3}{10000}) = -0.12
+
+This means that $1\%$ increase in $P_x$, quantity demanded will decrease by $.12\$$ for $Q^d_x$.
+
+If our price is at equlibrium, the demand curve is called **unit elastic**.
+
+If our price is above equilibrium, the demand curve will be called "elastic", at this point the demand will change very significantly.
+
+If our price is below equilibrium, the demand curve will be called "inelastic", at this point, the demand will change very small.
+
+If you have a product, ideally you'll want your product to be inelastic, which means that when you change your price, you'll want demand to change less.
+
+Elasticity can tell you how competitive a market is: if you're disrupting, your product will be very elastic.
+
+> Inelastic
+>
+> Definition: Demand is not very sensitive, or $|E^d_{Px}| < 1$
+
+> Elastic
+>
+> Definition: Demand is very sensitive, or $|E^d_{Px}| > 1$
+
+> Unit elastic
+>
+> Definition: Inflection point between inelasticity and elasticity. $|E^d_{Px}| = 1$
+
+Usually, when in the real world, you are not just given a demand curve. You have to calculate the it from the data you collect yourself (no free lunch!). Here, you can use arc elasticity
+
+> Arc elasticity
+>
+> Definition: When we don't know the slope of the demand curve, but you would want to know the rough elasticity. Do this by:
+>
+>$$E = \frac{\Delta Q / Q_{avg}}{\Delta P / D_{avg}}$$
+
+Ex: $P_x = 5$, then $Q^d_x = 9200$. $P_x = 6$, then $Q^d_x = 8800$, then:
+
+$$E = \frac{-400/9000}{1/5.50} = -0.244$$
+
+### Perfectly inelastic demand
+
+We call this perfectly inelastic demand.
+
+![alt text](image/15-perfectly-inelastic-demand.png)
+
+Ex: Pharmacy drugs. Whatever the price, you have to buy it anyway. A change in price $P_x$ will not change the demand $Q^d_x$, something like insulin.
+
+### Perfectly elastic demand
+
+We call this perfectly elastic demand.
+
+![alt text](image/16-perfectly-elastic-demand.png)
+
+Ex: Grains like corn, wheat. Farmer is a price takers at this point because there is a world market. You can't raise your price and expect market to buy it - market will just buy from millions of other farmers.
+
+### Factors affecting elasticity
+
+#### Availability of substitutes
+
+High number of substitute leads to more elastic; low number leads to more inelastic. This is obvious, if the price of a product is prohibitive and there are many other cheaper substitute, then market will shove to that instead. 
+
+#### Percentage of budget
+
+If I'm not spending a lot for a product wrt my budget, more inelastic. E.g chocolate
+
+If I'm spending a large percent of my budget, more elastic. We are very conscious of that
+
+#### Needs
+
+This is more inelastic. E.g. food as a category. You can't buy less food and then starve
+
+#### Wants
+
+This is more elastic. E.g. PC upgrades, entertainment.
+
+#### Long-run demand
+
+More elastic. E.g. investing. You think you don't need that now, so you are sensitive more against prices.
+
+#### Short-run demand
+
+More inelastic. E.g. gas. You need that gas to do things, you'll have to bite the price changes
+
+=> It alls boil down to our behavior needs time to change
+
+### Elastic curve
+
+![alt text](image/17-elasticity-curve.png)
+
+- When demand is elastic, a fall in $P_x$ results in a greater $Q^d_x$ demanded AND a rise in Total Expenditure
+- When demand is inelastic, while a drop in $P_x$ results in an increase in demand $Q^d_x$, demand doesn't rise that much in equal proportion to the drop in price, which results in a drop in Total Expenditure.
+
+### Income Elasticity of Demand
+> Income elasticity of demand
+>
+> Definition: measures how responsive the quantity demanded of a good changes in response to a change in consumer income.
+>
+> $$E^d_I = \left(\frac{\Delta Q^d_x }{\Delta I}\right)\left(\frac{I}{Q^d_x}\right)$$
+>
+>- If $E^d_I > 0$, this is **normal good** (as incomes rise, demand rises) e.g. you buy better wine when you make more money
+>- If $E^d_I < 0$, this is **inferior good** (as incomes rise, demand lowers) e.g. you don't buy those cheap wine when you make more money
+>
+> Ex: If $E^d_I = 0.8$, quantity demanded "at each price" increase by $.8\%$ for each $1\%$ increase in income, a shift of the demand curve
+
+### Cross Price Elasticity of Demand
+
+> Cross Price Elasticity of Demand
+>
+> Definition: measures how responsive the quantity demanded of one good (X) changes in response to a change in the price of another good (Y).
+> $$E^d_{Py} = \left(\frac{\Delta Q^d_x}{\Delta P_y}\right)\left(\frac{P_y}{Q^d_x}\right)$$
+>
+> - If $E^d_{Py} > 0$, substitute product
+> - If $E^d_{Py} < 0$, complement product
